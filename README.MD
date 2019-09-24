@@ -29,7 +29,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='x' title="tumblr part2.gif" width='' alt='Video Walkthrough' />
+<img src='tumblrpart2.gif"' title="" width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
