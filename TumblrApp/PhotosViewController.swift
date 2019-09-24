@@ -49,7 +49,25 @@ class PhotosViewController:  UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+
+        
+        
+        let cell = sender as! UITableViewCell
+        if let indexPath = TableView.indexPath(for: cell){
+            let post = posts[indexPath.row]
+            if let photos = post["photos"] as? [[String: Any]] {
+                
+                let photo = photos[0]
+               
+                let originalSize = photo["original_size"] as! [String: Any]
+               
+                let urlString = originalSize["url"] as! String
+                vc.photoUrlString = urlString
+                    }
+        }
+    }
     
 
     override func viewDidLoad() {
